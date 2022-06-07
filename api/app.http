@@ -1,0 +1,96 @@
+// API Testing for all route file
+
+// API Testing for auth.js
+    
+    // 1. For register API
+POST http://localhost:5000/api/auth/register
+content-type: application/json
+
+{
+    "username": "alokakash",
+    "email": "alok4k45h@gmail.com",
+    "password" : "12343456"
+}
+
+    // 2. For Login API
+###
+POST http://localhost:5000/api/auth/login
+content-type: application/json
+
+{
+    "username": "alok",
+    "password" : "123459087"
+}
+
+
+// API Testing for user.js For Updating Deleting && Getting User Detail
+
+    // 1.Update specific user
+###
+PUT  http://localhost:5000/api/user/627d5a8591eb266592b91c86
+content-type: application/json
+
+{
+    "userId": "627d5a8591eb266592b91c86",
+    "username": "alokakash",
+    "password" : "12345543"
+}
+
+    // 2.Deleting specific user
+###
+DELETE   http://localhost:5000/api/user/627d5a8591eb266592b91c86
+content-type: application/json
+
+{
+    "userId": "627d5a8591eb266592b91c86",
+    "username": "alokakash",
+    "password" : "12345543"
+}
+
+    // 3.Getting specific user
+###
+GET   http://localhost:5000/api/user/627cb22d34ebc913efeff2e3
+content-type: application/json
+
+
+// API Testing for posts.js
+###
+POST http://localhost:5000/api/posts
+content-type: application/json
+
+{
+    "username": "alok",
+    "title":"blogger",
+    "desc": "blogger desc",
+}
+
+###
+GET   http://localhost:5000/api/posts/
+content-type: application/json
+
+
+// API Testing for categories.js For Posting && getting Category Detail
+
+    // 1.Posting Category API
+###
+POST http://localhost:5000/api/categories/
+content-type: application/json
+
+{
+    "name": "play"
+}
+
+    // 2.Getting Category API
+###
+GET   http://localhost:5000/api/categories
+content-type: application/json
+
+
+
+###
+POST http://localhost:5000/api/upload
+content-type: application/multipart/form-data
+
+{
+    "name": "alokImage.png",
+}
